@@ -1014,11 +1014,14 @@ public:
 				if (evn->value && evn->heldDownSecs == 0) {
 					if ((leanState == 1 && id == leanLeft) || (leanState == -1 && id == leanRight)) {
 						SetLeanState(0);
+						CC_SwapSide.SetValueInt(0);
 					} else {
 						if (id == leanLeft) {
 							SetLeanState(1);
+							CC_SwapSide.SetValueInt(1)
 						} else if (id == leanRight) {
 							SetLeanState(-1);
+							CC_SwapSide.SetValueInt(0)
 						}
 					}
 				}
